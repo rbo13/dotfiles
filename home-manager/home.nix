@@ -73,6 +73,10 @@
     enable = true;
     userName = "rbo13";
     userEmail = "chardyy.orofeo@gmail.com";
+    signingKey = "~/.ssh/rbo13_ed25519.pub";
+    gpg = {
+      format = "ssh";
+    };
     aliases = {
       co = "checkout";
       s = "status";
