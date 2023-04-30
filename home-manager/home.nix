@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "rbo13";
@@ -27,7 +29,7 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    (pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];})
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -88,7 +90,7 @@
       co = "checkout";
       s = "status";
     };
-  }; 
+  };
 
   # Enable zoxide
   programs.zoxide = {
@@ -104,7 +106,7 @@
       return {
         enable_wayland = true,
         font_size = 13.0,
-        color_scheme = "Tomorrow Night",
+        color_scheme = "Gruvbox dark, hard (base16)",
         hide_tab_bar_if_only_one_tab = true,
       }
     '';
