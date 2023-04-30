@@ -145,10 +145,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     age
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
     curl
     fzf
+    fontconfig
     bintools-unwrapped
     fwupd
     gcc
@@ -158,6 +159,7 @@
     git-lfs
     thefuck
     coreutils
+    moreutils
     gnumake
     lm_sensors
     nixfmt
