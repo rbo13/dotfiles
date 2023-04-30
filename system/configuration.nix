@@ -172,6 +172,9 @@
     zsh
   ];
 
+  # Use neovim as default $EDITOR
+  environment.variables.editor = "nvim";
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;

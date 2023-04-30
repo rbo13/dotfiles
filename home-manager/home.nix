@@ -111,4 +111,9 @@
       }
     '';
   };
+
+  # Add neovim
+  programs.neovim = {
+    enable = true;
+  };
 }
