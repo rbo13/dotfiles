@@ -73,17 +73,26 @@
     enable = true;
     userName = "rbo13";
     userEmail = "chardyy.orofeo@gmail.com";
-    signingKey = "~/.ssh/rbo13_ed25519.pub";
+    extraConfig = {
+      core = {
+        whitespace = "trailing-space,space-before-tab";
+        autocrlf = false;
+      };
+      # Sign all commits using ssh key
+      commit.gpgsign = true;
+      gpg.format = "ssh";
+      user.signingkey = "~/.ssh/rbo13_ed25519.pub";
+    };
     aliases = {
       co = "checkout";
       s = "status";
     };
   }; 
 
-  # Enable z.lua
-  programs.z-lua = {
+  # Enable zoxide
+  programs.zoxide = {
     enable = true;
-    options = [ "enhanced" "once" "fzf" ];
+    enableZshIntegration = true;
   };
 
   # Enable wezterm
