@@ -80,15 +80,18 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "intel" ];
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.sddm.settings.Wayland.SessionDir = "${pkgs.plasma5Packages.plasma-workspace}/share/wayland-sessions";
 
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+    xkbOptions = "ctrl:nocaps";
   };
 
   # Enable CUPS to print documents.
