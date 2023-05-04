@@ -223,11 +223,6 @@
 
   # Enable tor service
   services.tor.client.enable = true;
-  services.tor.settings = {
-    UseBridges = true;
-    ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/obfs4proxy";
-    Bridge = "obfs4 IP:ORPort [fingerprint]";
-  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
