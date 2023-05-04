@@ -226,7 +226,7 @@
   services.tor.settings = {
     UseBridges = true;
     ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/obfs4proxy";
-    Bridge = "obfs4 IP:ORPort [fingerprint]"
+    Bridge = "obfs4 IP:ORPort [fingerprint]";
   };
 
   # Open ports in the firewall.
