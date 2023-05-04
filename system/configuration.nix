@@ -18,6 +18,9 @@
   # Reduce swappiness
   boot.kernel.sysctl = { "vm.swappiness" = 10; };
 
+  # Video drivers
+  boot.kernelParams = [ "i915.force_probe=5917" ];
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
