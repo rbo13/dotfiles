@@ -136,7 +136,6 @@
     packages = with pkgs; [
       firefox
       kate
-      nvim
     ];
   };
 
