@@ -16,7 +16,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # Reduce swappiness
-  boot.kernel.sysctl = { "vm.swappiness" = 10; };
+  boot.kernel.sysctl = { "vm.swappiness" = 60; };
 
   # Video drivers
   boot.kernelParams = [ "i915.force_probe=5917" ];
@@ -78,6 +78,12 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Enable earlyoom service
+  services.earlyoom = {
+    enable = true;
+    freeMemThreshold = 5;
+  };
+
   # Enable fstrim for SSD drives.
   services.fstrim.enable = true;
 
@@ -130,7 +136,7 @@
     packages = with pkgs; [
       firefox
       kate
-    #  thunderbird
+      nvim
     ];
   };
 
