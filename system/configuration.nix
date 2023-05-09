@@ -157,6 +157,7 @@
   environment.systemPackages = with pkgs; [
     age
     vim
+    neovim
     wget
     curl
     fzf
