@@ -136,6 +136,7 @@
     packages = with pkgs; [
       firefox
       kate
+      tor-browser-bundle-bin
     ];
   };
 
@@ -157,7 +158,6 @@
   environment.systemPackages = with pkgs; [
     age
     vim
-    neovim
     wget
     curl
     fzf
@@ -174,7 +174,6 @@
     moreutils
     gnumake
     lm_sensors
-    tor-browser-bundle-bin
     nixfmt
     pciutils
     usbutils
